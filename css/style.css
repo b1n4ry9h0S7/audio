@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Galada|IM+Fell+English+SC|Lobster|Shrikhand');
+body {
+  background: #000000;
+}
+
+.container,
+#text {
+  position: relative;
+  /* top: 10%; */
+  /* left: 10px; */
+  color: white;
+  z-index: 100;
+}
+
+#canvas {
+  position: fixed;
+
+  /* left: 0; */
+  top: 0;
+  width: 100%;
+  height: 93%;
+  border-bottom: 3px solid greenyellow;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
+#playing {
+  /* margin-top: 10px; */
+  font-family: 'IM Fell English SC', serif;
+}
+#thefile {
+  /* background-color: transparent !important; */
+}
+.container {
+  /* margin-top: ; */
+  visibility: inherit;
+}
+
+#text_up {
+  font-family: 'Galada', cursive;
+  margin-top: 10px;
+  font-size: 30px;
+}
+#text {
+  margin-top: 10px;
+  color: white;
+}
+/* Songs section */
+#sdetails {
+  /* position: fixed; */
+  margin-top: 10px;
+  color: white;
+  /* text-align: center; */
+  /* font-family: ; */  
+  border: 1px dashed white;
+  padding: 0px;
+  width: auto;
+  /* margin-right: 20%; */
+  /* left: 50%; */
+}
+
+#sname {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 45px;
+}
+
+#sd {
+  font-family: 'Galada', cursive;
+  margin-top: 10px;
+  font-size: 30px;
+}
