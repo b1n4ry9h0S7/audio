@@ -13,6 +13,9 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.6/wavesurfer.min.js"></script>
+
   <!-- ? Bootstarp stuff ? -->
 
   <link rel="stylesheet" href="css/style.css">
@@ -25,20 +28,17 @@
     </div>
     <div class="container">
       <p class="display-5 text-center">Select a file to be played!</p>
-      <!-- <p id="text_up" class="display-5 text-center">Refresh before choosing a new file!</p> -->
-
       <div class="custom-file">
-
         <input type="file" class="custom-file-input" id="thefile" accept="audio/*">
         <label class="custom-file-label" for="customFile">Choose file</label>
       </div>
-      <!-- <p class="text-center" id="sd">Song details</p>/ -->
       <div id="sdetails" class="text-center">
         <h3 class="display-4 text-center" id="playing"></h3>
         <p class="text-center" id="sname"></p>
+
+        <div id="waveform"></div>
       </div>
     </div>
-    <!-- <input type="file" id="thefile" accept="audio/*" /> -->
     <canvas id="canvas"></canvas>
     <audio id="myAudio" controls></audio>
   </div>

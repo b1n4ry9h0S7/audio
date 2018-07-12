@@ -1,10 +1,13 @@
-window.onload = function() {
+window.onload = function () {
   var file = document.getElementById('thefile');
 
   var audio = document.getElementById('myAudio');
 
-  file.onchange = function() {
+  file.onchange = function () {
+    // window.reload();
     var files = this.files;
+    var thing = URL.createObjectURL(files[0]);
+    console.log('Thing: ', thing);
     audio.src = URL.createObjectURL(files[0]);
     var filename = files[0].name;
     console.log(filename);
@@ -22,13 +25,13 @@ window.onload = function() {
     // test
     var title;
     var artist;
-    id3(files[0], function(err, tags) {
+    // @ts-ignore
+    id3(files[0], function (err, tags) {
       title = tags.title;
       artist = tags.artist;
       document.getElementById('playing').innerHTML = tags.artist;
       document.getElementById('sname').innerHTML = tags.title;
     });
-
     // end-test
 
     // document.getElementById('playing').innerHTML = 'Now Playing...';
@@ -64,9 +67,9 @@ window.onload = function() {
       for (var i = 0; i < bufferLength; i++) {
         barHeight = dataArray[i];
 
-        var r = barHeight + 25 * (i / bufferLength);
+        var r = barHeight + 125 * (i / bufferLength);
         var g = 25 * (i / bufferLength);
-        var b = 25;
+        var b = 200;
 
         ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
         ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
